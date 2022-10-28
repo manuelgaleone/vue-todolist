@@ -43,6 +43,9 @@ let { createApp } = Vue
             //Svuoto l'input dopo l'inserimento
             this.newTask = ""
         },
-        
+        deleteTask(index) {
+            console.log("delete click")
+            this.tasks.splice(index, 1)
+        }
     }
   }).mount('#app')
