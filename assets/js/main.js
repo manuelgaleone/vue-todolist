@@ -26,7 +26,7 @@ let { createApp } = Vue
       return {
         isError: false,
         newTask: "",
-        tasks: {[
+        tasks: [
             {
             task:"Andare a fare la spesa"
             },
@@ -36,7 +36,7 @@ let { createApp } = Vue
             {
             task:"Zoom di lavoro"
             }
-        ]}
+        ]
       }
     },
     methods: {

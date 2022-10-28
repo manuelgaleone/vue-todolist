@@ -25,8 +25,8 @@
                 </p>
             </div>
             <ul class="task_list mx-5 py-5">
-                <li :class="{ done: isDone }" v-for="(task, index) in tasks">
-                {{tasks}} <i class="px-3 fa-solid icon_done fa-circle-xmark" @click="deleteTask(index)"></i>
+                <li :class="{ done: isDone }" v-for="(tasks, index) in tasks">
+                {{tasks.task}} <i class="px-3 fa-solid icon_done fa-circle-xmark" @click="deleteTask(index)"></i>
                 </li>
             </ul>
         </div>
