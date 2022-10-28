@@ -26,11 +26,17 @@ let { createApp } = Vue
       return {
         isError: false,
         newTask: "",
-        tasks: [
-            "Andare a fare la spesa",
-            "Andare al Supermercato",
-            "Zoom di lavoro"
-        ]
+        tasks: {[
+            {
+            task:"Andare a fare la spesa"
+            },
+            {
+            task:"Andare al Supermercato"
+            },
+            {
+            task:"Zoom di lavoro"
+            }
+        ]}
       }
     },
     methods: {
