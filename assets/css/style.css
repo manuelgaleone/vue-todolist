@@ -24,3 +24,18 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.icon_done:hover {
+    color: red;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.task_list > li:hover {
+    text-decoration: line-through;
+    transition: 0.3s;
+}
+
+.done {
+    text-decoration: line-through;
+}

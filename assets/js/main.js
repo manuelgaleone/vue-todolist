@@ -24,6 +24,7 @@ let { createApp } = Vue
   createApp({
     data() {
       return {
+        isDone: false,
         newTask: "",
         tasks: [
             "Andare a fare la spesa",
@@ -34,8 +35,14 @@ let { createApp } = Vue
     },
     methods: {
         addTask() {
-            console.log("Click")
+            //Loggo e provo
+            //console.log("Click")
+            //Porto sopra l'ultima task
             this.tasks.unshift(this.newTask)
-        }
+
+            //Svuoto l'input dopo l'inserimento
+            this.newTask = ""
+        },
+        
     }
   }).mount('#app')
