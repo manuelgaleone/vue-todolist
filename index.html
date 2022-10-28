@@ -18,8 +18,11 @@
         </h1>
         <div class="addTask">
             <div class="todo_elements d_flex align_items mx-5">
-                <input v-model="newTask" class="rounded-2 input_text px-1 py-1" type="text" placeholder="Cosa hai da fare?" id="input_text">
+                <input v-model="newTask" @keyup.enter="addTask" class="rounded-2 input_text px-1 py-1" type="text" placeholder="Cosa hai da fare?" id="input_text">
                 <button @click="addTask" class="submit_button mx-3">Aggiungi alla lista</button>
+                <p class="error" v-show="isError">
+                    Devi scrivere più di 3 caratteri!
+                </p>
             </div>
             <ul class="task_list mx-5 py-5">
                 <li :class="{ done: isDone }" v-for="(task, index) in tasks">

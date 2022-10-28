@@ -24,7 +24,7 @@ let { createApp } = Vue
   createApp({
     data() {
       return {
-        isDone: false,
+        isError: false,
         newTask: "",
         tasks: [
             "Andare a fare la spesa",
@@ -42,10 +42,24 @@ let { createApp } = Vue
 
             //Svuoto l'input dopo l'inserimento
             this.newTask = ""
+
+            //Errore
+            if (this.newTask.length < 3) {
+                this.isError = true
+            } else {
+                this.isError = false
+                //Porto sopra l'ultima task
+                this.tasks.unshift(this.newTask)
+    
+                //Svuoto l'input dopo l'inserimento
+                this.newTask = ""
+            }
         },
+        //Delete task function
         deleteTask(index) {
             console.log("delete click")
             this.tasks.splice(index, 1)
-        }
+        },
+        
     }
   }).mount('#app')
